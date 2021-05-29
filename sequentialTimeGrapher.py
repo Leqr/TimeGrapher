@@ -6,7 +6,7 @@ import os
 
 class TimeGrapher():
     def __init__(self):
-        self.secRec = 5
+        self.secRec = 20
         self.soundGetter = WatchSoundGetter(secRec = self.secRec)
         self.soundProcesser = WatchSoundProcesser()
         self.outFile = 'data.wav'
@@ -14,7 +14,7 @@ class TimeGrapher():
     def ON(self):
         #setup
         self.root = tk.Tk()
-        self.root.geometry("325x250")
+        self.root.geometry("325x270")
         self.root.title('TimeGrapher')
         frame = tk.Frame(self.root)
         frame.grid()
@@ -32,6 +32,7 @@ class TimeGrapher():
             ("21600 A/h",21600),
             ("19800 A/h",19800),
             ("18000 A/h",18000),
+            ("3600   A/h",3600)
         ]
 
         def chooseFreq():
